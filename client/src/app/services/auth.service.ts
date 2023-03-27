@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-  private API_URL = "http://localhost:3000"
+  private API_URL = "http://quizzards.site:3000"
   private registerURL = this.API_URL+"/api/v1/user/register";
   private loginURL = this.API_URL+"/api/v1/user/login";
   constructor(private _http: HttpClient) { }
@@ -23,9 +23,9 @@ export class AuthService {
         localStorage.setItem('token', response['data']['token']);
         this.saveUserData(JSON.stringify(response['data']['user']))
         return response;
-      } 
+      }
     }));
-  } 
+  }
 
   saveUserData(user){
     localStorage.setItem('userData',user);

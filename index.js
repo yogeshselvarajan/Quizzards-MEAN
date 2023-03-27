@@ -22,8 +22,9 @@ app.use('/api/v1/student',studentRouter)
 app.use('/api/v1/challenge',challengeRouter)      
 app.use('/api/v1/teacher',teacherRouter)
 app.use('/api/v1/quiz',quizRouter)      
-app.use('/api/v1/reports',reportRouter) 
+app.use('/api/v1/reports',reportRouter)
 
-app.listen(port, () => {
-    console.log('Server is up on port ' + port)
-})
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server listening on http://0.0.0.0:${port}`);
+});
+

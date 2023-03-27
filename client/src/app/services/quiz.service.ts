@@ -8,7 +8,7 @@ import { Quiz } from '../models/Quiz';
 })
 export class QuizService {
 quizData;
-  private API_URL = "http://localhost:3000"
+  private API_URL = "http://quizzards:3000"
   private createQuizURL = this.API_URL + "/api/v1/quiz/createquiz";
   private DisplayQuizURL = this.API_URL + "/api/v1/teacher/profile/myQuizzes";
 

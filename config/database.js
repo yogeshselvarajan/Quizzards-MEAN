@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://mongoinst:4bmNU17MfzarNlbh84Xc4I8DNcxkxn7uXd0V54m1tC09PXwGozWnaxNzFAyNoe4XI7W8eRWqFaWPACDb7z77PQ%3D%3D@mongoinst.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@mongoinst@';
+var dbURI = 'mongodb://quizzards:beqPLFw8RzFa0C8mSlX6fduNOpiB664ojCoGDDZb0s8QbQXmsziuvM5Qb61lTvn9oh3QsMEA8sJxACDb4XjkhQ%3D%3D@quizzards.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@quizzards@';
 
 
 mongoose.connect(dbURI, {
