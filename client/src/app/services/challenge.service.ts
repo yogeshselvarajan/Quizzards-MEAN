@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class ChallengeService {
 
-  private API_URL = "http://quizzards.site:3000"
+  private API_URL = "http://localhost:3000"
   private createChallengeURL = this.API_URL + "/api/v1/challenge/createChallenge/"
   private DisplayChallengeURL = this.API_URL + "/api/v1/reports/viewReport";
   private JoinChallengeURL = this.API_URL+"/api/v1/challenge/joinChallenge";

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ReportsService {
-  private API_URL = "http://quizzards:3000";
+  private API_URL = "http://localhost:3000"
   private challengeReportURL=this.API_URL+ "/api/v1/reports/viewReport/";
   private feedbackdataURL=this.API_URL+ "/api/v1/challenge/fetchFeedback/";
 
