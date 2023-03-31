@@ -141,7 +141,7 @@ export class ChallengeReportSummaryComponent implements OnInit {
             }
           }
       }
-      ) 
+      )
     }
   generatebargraph(){
 
@@ -366,10 +366,9 @@ export class ChallengeReportSummaryComponent implements OnInit {
     });
 
   }
-    
-  endChallenge()
-  {
-     this.challengeservice.endNowChallenge(this.challengeId).subscribe(
+
+  endChallenge() {
+    this.challengeservice.endNowChallenge(this.challengeId).subscribe(
       (res) => {
         console.log("Challnge reports: success")
         console.log(res);
@@ -381,13 +380,20 @@ export class ChallengeReportSummaryComponent implements OnInit {
       }
     );
   }
+
+downloadExcel() {
+  this.reportsservice.downloadExcel(this.challengeId).subscribe(data => {
+    const blob = new Blob([data], {type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'});
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    // file name = [Challenge ID] Report.xlsx
+    a.download =  this.challengeId + ' Report.xlsx';
+    a.click();
+    window.URL.revokeObjectURL(url);
+    a.remove();
+    }, error => {
+    console.log(error);
+    });
+  }
 }
-    /*his.c_id=this.challengeId
-    console.log(this.c_id)
-    this.challengeservice.endNowChallenge(this.challengeId)*/
-    //getting the playerlist
-    
- 
-  
-
-

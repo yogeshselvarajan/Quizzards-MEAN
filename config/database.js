@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://quizzards:beqPLFw8RzFa0C8mSlX6fduNOpiB664ojCoGDDZb0s8QbQXmsziuvM5Qb61lTvn9oh3QsMEA8sJxACDb4XjkhQ%3D%3D@quizzards.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@quizzards@';
+var dbURI = 'mongodb://quizzards-mongo:64hHRa86QSnABaLt1lrhSMqc2mAJcFZ6v8emT6dD5Z4q9o7b6cMmhA78UJPB2DZ79oGSKlDrxBOOACDbYw0XVQ%3D%3D@quizzards-mongo.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@quizzards-mongo@';
 
 
 mongoose.connect(dbURI, {
@@ -39,12 +39,7 @@ process.on('SIGINT', function() {
     process.exit(0);
   });
 });
-// For Heroku app termination
-// process.on('SIGTERM', function() {
-//   gracefulShutdown('Heroku app termination', function() {
-//     process.exit(0);
-//   });
-// });
+
 
 // BRING IN YOUR SCHEMAS & MODELS
 require('../models/User');
